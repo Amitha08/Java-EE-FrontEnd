@@ -55,7 +55,23 @@
             <a href="#">Link 3</a>
           </div>
           <a href="#clients">Friend Request</a>
+          <ul class="closable-list">            
+            <li>Agnes<span class="close">&times;</span></li>
+          
+            <li>Billy<span class="close">&times;</span></li>
+            <li>Bob<span class="close">&times;</span></li>
+          
+            <li>Calvin<span class="close">&times;</span></li>
+            <li>Christina<span class="close">&times;</span></li>           
+          </ul>
           <a href="#contact">Messages</a>
+          <ul class="closable-list">            
+            <li>Ritik Msg<span class="close">&times;</span></li>
+          
+            <li>Roshan msg<span class="close">&times;</span></li>
+            <li>Bobin Msg<span class="close">&times;</span></li>
+                   
+          </ul>
         </div>
 
         <script>
@@ -75,6 +91,117 @@
             });
           }
           </script>
+
+         <script>
+            var closebtns = document.getElementsByClassName("close");
+            var i;
+  
+          for (i = 0; i < closebtns.length; i++) {
+            closebtns[i].addEventListener("click", function() {
+           this.parentElement.style.display = 'none';
+           });
+           }
+         </script> 
+
+
+          
+      </nav>
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+   
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-left">
+          <h2>FEED</h2>
+          <div class="search-container">
+            <form action="/action_page.php">
+              
+             <!---- <button type="submit"><i class="fa fa-search"></i></button> -->
+             <div class="topnav">
+              <!----
+              <a href="#about">Request</a>
+              <a href="#contact">Inbox</a>
+              <a class="active" href="#home">Notification</a> -->
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search" name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+            </form>
+          </div>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Profile</li>
+          </ol>
+        </div>
+
+      </div>
+      
+    </section>
+    
+    <section class="inner-page">
+      <div class="container">
+        <div class="tweet-body"> 
+          <form method="post" enctype="multipart/form-data"> 
+            <textarea  name="status" placeholder="Write your post here!" rows="6" cols="50"></textarea> <br>
+            <button > Post</button>
+            </form>
+          </div> 
+      </div>
+
+      <div class="post-outer">
+        <h5> User Name</h5>
+        <div  class="post-content">
+          Content is here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </div>
+        <div class="button-outer-post">
+          <button class="post-button"> Delete </button>
+          <button class="post-button">Edit</button>
+          <button class="post-button"> Save</button>
+          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        </div>
+      
+      </div>
+
+      <div class="post-outer">
+        <h5> User Name</h5>
+        <div  class="post-content">
+          Content is here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </div>
+        <div class="button-outer-post">
+          <button class="post-button"> Save</button>
+          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        </div>
+      
+      </div>
+
+
+      <div class="post-outer">
+        <h5> User Name</h5>
+        <div  class="post-content">
+          Content is here. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </div>
+        <div class="button-outer-post">
+          <button class="post-button"> Save</button>
+          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        </div>
+      
+      </div>
+
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("fa-thumbs-down");
+        }
+        </script>
+
       </nav>
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
